@@ -364,10 +364,10 @@ myCache.on( "del", function( key, value ){
 ## expired
 
 Fired when a key expires.
-You will get the `key` and `value` as callback argument.
+You will get the `key`,  `value` and the TTL as callback argument.
 
 ```js
-myCache.on( "expired", function( key, value ){
+myCache.on( "expired", function( key, value, ttl ){
 	// ... do something ...
 });
 ```
