@@ -591,7 +591,7 @@ module.exports = class NodeCache extends EventEmitter
 			if @options.deleteOnExpire
 				_retval = false
 				@del( key )
-			@emit( "expired", key, @_unwrap(data) )
+			@emit( "expired", key, @_unwrap(data), data.t )
 
 		return _retval
 
